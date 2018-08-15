@@ -1,3 +1,6 @@
+# Sniperkit-Bot
+# - Status: analyzed
+
 sudo: required
 language: go
 go:
@@ -11,7 +14,7 @@ script:
 - go test -v
 after_success:
 - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-- export REPO=zricethezav/gitleaks
+- export REPO=sniperkit/snk.fork.gitleaks
 - export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH ; fi`
 - docker build -f Dockerfile -t $REPO:$COMMIT .
 - docker tag $REPO:$COMMIT $REPO:$TAG

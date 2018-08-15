@@ -1,10 +1,13 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package main
 
 import (
 	"context"
 	"fmt"
-	"github.com/google/go-github/github"
-	"golang.org/x/oauth2"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -12,6 +15,9 @@ import (
 	"os/signal"
 	"path"
 	"strings"
+
+	"github.com/google/go-github/github"
+	"golang.org/x/oauth2"
 )
 
 // Owner represents the owner of a repo or group of repos.

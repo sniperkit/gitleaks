@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package main
 
 import (
@@ -82,7 +87,7 @@ func TestGithubTarget(t *testing.T) {
 	if !isGithubTarget("https://github.com/") {
 		t.Error()
 	}
-	if !isGithubTarget("git@github.com:zricethezav/gitleaks.git") {
+	if !isGithubTarget("git@github.com:sniperkit/snk.fork.gitleaks.git") {
 		t.Error()
 	}
 }
